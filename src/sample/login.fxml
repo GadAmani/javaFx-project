@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="289.0" prefWidth="464.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25" fx:controller="sample.Controller">
+   <children>
+      <BorderPane layoutX="-1.0" layoutY="-1.0" prefHeight="300.0" prefWidth="400.0">
+         <left>
+            <AnchorPane prefHeight="300.0" prefWidth="255.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="92.0" layoutY="42.0" text="LOGIN">
+                     <font>
+                        <Font name="Arial Black" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="32.0" layoutY="79.0" text="Welcome to the GadStore system">
+                     <font>
+                        <Font name="Arial Unicode MS" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="usernameTextField" layoutX="53.0" layoutY="111.0" promptText="👤 Username" style="-fx-background-color: #EDE9FE;" />
+                  <PasswordField fx:id="passwordPasswordField" layoutX="53.0" layoutY="150.0" promptText="🔑 Password" style="-fx-background-color: #EDE9FE;" />
+                  <Button fx:id="loginButton" layoutX="93.0" layoutY="208.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="31.0" prefWidth="69.0" style="-fx-background-color: linear-gradient(to bottom right, #8a7dff, #5a4bff);; -fx-border-radius: 20; -fx-background-radius: 20;" text="Login" textFill="WHITE" />
+                  <Label layoutX="14.0" layoutY="250.0" text="You already have an account ?">
+                     <font>
+                        <Font name="Arial Unicode MS" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="registerButton" layoutX="177.0" layoutY="243.0" mnemonicParsing="false" onAction="#registerButton" prefHeight="31.0" prefWidth="69.0" style="-fx-background-color: transparent;" text="Register" textFill="#8a7dff" underline="true" />
+                  <Label fx:id="loginMessageLabel" alignment="CENTER" layoutX="23.0" layoutY="14.0" prefHeight="17.0" prefWidth="212.0" textFill="#61e670" />
+               </children>
+            </AnchorPane>
+         </left>
+         <right>
+            <AnchorPane prefHeight="351.0" prefWidth="210.0" style="-fx-background-color: linear-gradient(to bottom right, #8a7dff, #5a4bff);;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="69.0" layoutY="66.0" style="-fx-text-fill: white;" text="🛒">
+                     <font>
+                        <Font size="72.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="31.0" layoutY="144.0" text="GadStore" textFill="WHITE">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+   </children>
+
+</AnchorPane>

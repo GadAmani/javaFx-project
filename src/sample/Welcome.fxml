@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="387.0" prefWidth="573.0"
+            xmlns="http://javafx.com/javafx/25"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.Controller">
+
+    <children>
+        <BorderPane prefHeight="387.0" prefWidth="573.0">
+
+            <top>
+                <AnchorPane prefHeight="43.0" prefWidth="573.0"
+                            style="-fx-background-color: white;"
+                            BorderPane.alignment="CENTER">
+
+                    <children>
+                        <Label layoutX="50.0" layoutY="13.0"
+                               style="-fx-background-color: transparent;"
+                               text="GadStore"
+                               textFill="#8a7dff">
+                            <font>
+                                <Font name="Arial Rounded MT Bold" size="13.0"/>
+                            </font>
+                        </Label>
+
+                        <Label layoutX="26.0" layoutY="9.0"
+                               text="🛒"
+                               textFill="#8a7dff">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Label>
+
+                        <Label fx:id="welcomeUsername"
+                               layoutX="415.0"
+                               layoutY="11.0"
+                               text="Username"
+                               textFill="#8a7dff">
+                            <font>
+                                <Font name="Arial Unicode MS" size="14.0"/>
+                            </font>
+                        </Label>
+
+                        <Button fx:id="logoutButton"
+                                layoutX="491.0"
+                                layoutY="7.0"
+                                mnemonicParsing="false"
+                                onAction="#logoutButtonOnAction"
+                                prefHeight="29.0"
+                                prefWidth="67.0"
+                                style="-fx-border-radius: 20; -fx-background-color: linear-gradient(to bottom right, #8a7dff, #5a4bff); -fx-border-color: white; -fx-background-radius: 20;"
+                                text="Log out"
+                                textFill="#f2f0ef">
+                            <font>
+                                <Font name="Arial Rounded MT Bold" size="12.0"/>
+                            </font>
+                        </Button>
+                    </children>
+                </AnchorPane>
+            </top>
+
+            <center>
+                <AnchorPane prefHeight="180.0"
+                            prefWidth="573.0"
+                            style="-fx-background-color: #EDE9FE;"
+                            BorderPane.alignment="CENTER">
+
+                    <children>
+                        <Label layoutX="33.0"
+                               layoutY="32.0"
+                               text="Welcome, ">
+                            <font>
+                                <Font name="Arial Bold" size="17.0"/>
+                            </font>
+                            <effect>
+                                <InnerShadow/>
+                            </effect>
+                        </Label>
+
+                        <Label fx:id="welcomeUsername1"
+                               layoutX="130.0"
+                               layoutY="31.0"
+                               text="Username"
+                               textFill="#5a4bff">
+                            <font>
+                                <Font name="Arial Unicode MS" size="16.0"/>
+                            </font>
+                        </Label>
+
+                        <Button fx:id="addProductButton"
+                                layoutX="33.0"
+                                layoutY="63.0"
+                                mnemonicParsing="false"
+                                onAction="#addProduct"
+                                prefHeight="29.0"
+                                prefWidth="97.0"
+                                style="-fx-border-radius: 20; -fx-background-color: #8a7dff; -fx-background-radius: 29;"
+                                text="+ Add Product"
+                                textFill="WHITE"/>
+
+                        <Button fx:id="viewInventoryButton"
+                                layoutX="151.0"
+                                layoutY="63.0"
+                                mnemonicParsing="false"
+                                prefHeight="29.0"
+                                prefWidth="110.0"
+                                style="-fx-border-radius: 20; -fx-background-color: transparent; -fx-border-color: linear-gradient(to bottom right, #8a7dff, #5a4bff); -fx-border-width: 1.5;"
+                                text="View Inventory"
+                                textFill="#8a7dff">
+                            <font>
+                                <Font name="System Bold" size="12.0"/>
+                            </font>
+                        </Button>
+
+                        <TextField fx:id="nameField"
+                                   layoutX="43.0"
+                                   layoutY="104.0"
+                                   prefWidth="120.0"
+                                   promptText="Name"/>
+
+                        <TextField fx:id="quantityField"
+                                   layoutX="200.0"
+                                   layoutY="104.0"
+                                   prefWidth="120.0"
+                                   promptText="Quantity"/>
+
+                        <TextField fx:id="priceField"
+                                   layoutX="359.0"
+                                   layoutY="104.0"
+                                   prefWidth="120.0"
+                                   promptText="Price"/>
+
+                    </children>
+                </AnchorPane>
+            </center>
+
+            <bottom>
+                <AnchorPane prefHeight="313.0"
+                            prefWidth="573.0"
+                            style="-fx-background-color: linear-gradient(to bottom right, #8a7dff, #5a4bff);"
+                            BorderPane.alignment="CENTER">
+
+                    <children>
+                        <TableView fx:id="productTable"
+                                   layoutX="33.0"
+                                   layoutY="30.0"
+                                   prefHeight="250.0"
+                                   prefWidth="500.0">
+
+                            <columns>
+                                <TableColumn fx:id="nameColumn"
+                                             prefWidth="140.0"
+                                             text="Name"/>
+
+                                <TableColumn fx:id="quantityColumn"
+                                             prefWidth="90.0"
+                                             text="Quantity"/>
+
+                                <TableColumn fx:id="priceColumn"
+                                             prefWidth="90.0"
+                                             text="Price"/>
+
+                                <TableColumn fx:id="editColumn"
+                                             prefWidth="85.0"
+                                             text="Edit"/>
+
+                                <TableColumn fx:id="deleteColumn"
+                                             prefWidth="85.0"
+                                             text="Delete"/>
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+            </bottom>
+
+        </BorderPane>
+    </children>
+</AnchorPane>
